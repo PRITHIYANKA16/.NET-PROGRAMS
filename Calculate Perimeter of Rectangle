@@ -1,0 +1,16 @@
+
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter length: ");
+        double length = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter breadth: ");
+        double breadth = Convert.ToDouble(Console.ReadLine());
+
+        double perimeter = 2 * (length + breadth);
+        Console.WriteLine($"Perimeter of rectangle: {perimeter}");
+    }
+}
