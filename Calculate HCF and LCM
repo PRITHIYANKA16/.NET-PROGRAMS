@@ -1,0 +1,26 @@
+
+
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int tempA = a, tempB = b;
+        while (tempB != 0)
+        {
+            int temp = tempB;
+            tempB = tempA % tempB;
+            tempA = temp;
+        }
+        int hcf = tempA;
+        int lcm = (a * b) / hcf;
+
+        Console.WriteLine($"HCF: {hcf}, LCM: {lcm}");
+    }
+}
