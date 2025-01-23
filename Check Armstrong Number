@@ -1,0 +1,19 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        int temp = num, sum = 0;
+
+        while (temp > 0)
+        {
+            int digit = temp % 10;
+            sum += digit * digit * digit;
+            temp /= 10;
+        }
+
+        Console.WriteLine(num == sum ? "Armstrong number." : "Not an Armstrong number.");
+    }
+}
