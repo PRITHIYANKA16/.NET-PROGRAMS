@@ -1,0 +1,16 @@
+
+
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter array elements (comma-separated): ");
+        int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+
+        int max = arr.Max();
+        int secondMax = arr.Where(x => x != max).Max();
+
+        Console.WriteLine($"Second largest number: {secondMax}");
+    }
+}
