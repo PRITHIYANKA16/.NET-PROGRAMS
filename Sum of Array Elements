@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter array elements (comma-separated): ");
+        int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+
+        int sum = 0;
+        foreach (int num in arr)
+        {
+            sum += num;
+        }
+
+        Console.WriteLine($"Sum of array: {sum}");
+    }
+}
