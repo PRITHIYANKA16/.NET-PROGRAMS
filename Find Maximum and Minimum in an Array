@@ -1,0 +1,14 @@
+
+
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter array elements (comma-separated): ");
+        int[] arr = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+
+        Console.WriteLine($"Maximum: {arr.Max()}");
+        Console.WriteLine($"Minimum: {arr.Min()}");
+    }
+}
